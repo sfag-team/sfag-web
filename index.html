@@ -81,6 +81,11 @@
     .tasks{width:100%;border-collapse:collapse;margin-top:8px}
     .tasks th,.tasks td{border:1px solid var(--ring);padding:8px;text-align:left}
     .muted{color:var(--muted)}
+    .semester-divider{
+      display:flex;align-items:center;gap:12px;margin:24px 0 16px;
+      font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);
+    }
+    .semester-divider::before,.semester-divider::after{content:'';flex:1;height:1px;background:var(--ring)}
 
     @media (min-width:640px){
       .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -476,6 +481,200 @@
     <li>Dať všetky doterajšie zmeny <strong>dokopy do jednej vetvy</strong> v Gite.</li>
     <li>Vytvoriť <strong>APK</strong> na stiahnutie, aby sa na ďalšom stretnutí dala testovať aktuálna funkcionalita.</li>
   </ul>
+</details>
+
+<!-- ===== LETNÝ SEMESTER 2026 ===== -->
+<div class="semester-divider">Letný semester 2026</div>
+
+<p class="muted" style="margin:0 0 14px">
+  Stále však nejde o verziu pripravenú na nasadenie, je potreba spísať zistené nedostatky a body
+  na dopracovanie počas prázdnin. Taktiež je treba pripraviť postup práce na ďalší semester.
+</p>
+
+<!-- Týždeň 1 – letný semester -->
+<details>
+  <summary>Týždeň 1 — 2026-02-19</summary>
+  <p class="muted">Stretnutie bolo zrušené z dôvodu neprítomnosti vedúcej Mgr. Daniela Chudá, PhD.</p>
+</details>
+
+<!-- Týždeň 2 – letný semester -->
+<details>
+  <summary>Týždeň 2 — 2026-02-26</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Martin, Slavo</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 2 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Spísať zistené nedostatky a body na dopracovanie počas prázdnin</td><td>Tím</td><td>Spravené</td></tr>
+      <tr><td>Pripraviť postup práce na ďalší semester</td><td>Tím</td><td>V procese</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Stretnutie malo veľmi nízku účasť (prítomní boli iba 2 z 5 členov tímu). Z tohto dôvodu sa
+    nepreberala rozsiahla tímová agenda a plánovanie.
+    Martin aspoň zosumarizoval prácu, ktorú nedávno do projektu naimplementoval. Podarilo sa mu
+    pridať vykresľovanie stromu odvodenia (derivation tree). Okrem toho vykonal čistenie mŕtveho
+    kódu a zameral sa na celkovú štandardizáciu používateľského rozhrania. Boli nasadené štýly
+    typografie z Material 3 a prebehla celková reštrukturalizácia a zjednodušenie štruktúry projektu.
+    Zvyšné prerozdelenie úloh sa odložilo na ďalší týždeň.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 2 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Bug fixy a drobné vylepšenia (pokračovanie v refaktoringu a UI)</td><td>Martin</td></tr>
+      <tr><td>Zhodnotenie stavu aplikácie z pohľadu používateľa</td><td>Slavo</td></tr>
+      <tr><td>Zorganizovať stretnutie v lepšom počte a prerozdeliť ďalšie úlohy</td><td>Tím</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 3 – letný semester -->
+<details>
+  <summary>Týždeň 3 — 2026-03-05</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Jakub, Martin, Slavo</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 3 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Bug fixy a drobné vylepšenia (pokračovanie v refaktoringu a UI)</td><td>Martin</td><td>Spravené</td></tr>
+      <tr><td>Zhodnotenie stavu aplikácie z pohľadu používateľa</td><td>Slavo</td><td>V procese</td></tr>
+      <tr><td>Zorganizovať stretnutie v lepšom počte a prerozdeliť ďalšie úlohy</td><td>Tím</td><td>Spravené</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Za uplynulý týždeň boli v projekte dokončené viaceré úpravy zamerané najmä na refaktoring a
+    zjednotenie používateľského rozhrania. Prebehlo premenovanie a sprehľadnenie štruktúry projektu
+    (napr. presentation na ui, presuny a premenovania balíkov a súborov), zjednotili sa importy,
+    odsadenia, rozostupy a komponenty naprieč obrazovkami.
+    Funkčne boli opravené problémy s detekciou dotyku na škálovanom canvase, bolo doplnené
+    automatické prispôsobenie diagramu po resete a upravené callbacky v editore prechodov tak,
+    aby sa zbytočne neprepisoval stav. Okrem toho sa aktualizoval vzhľad aplikácie – nasadili sa M3
+    (Material Design 3) farby, časť bitmapových ikon sa nahradila vektorovými a upravili sa veľkosti
+    tlačidiel a textových štýlov pre lepšiu konzistentnosť UI.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 3 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Upozornenie na uloženie rozpracovaného automatu</td><td>Jakub</td></tr>
+      <tr><td>Dokončenie prechodu na Material 3</td><td>Martin</td></tr>
+      <tr><td>Analýza používateľského rozhrania a fungovania automatov</td><td>Slavo</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 4 – letný semester -->
+<details>
+  <summary>Týždeň 4 — 2026-03-12</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Jakub, Juraj, Martin, Slavo</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 4 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Implementácia návrhov dizajnu obrazoviek, štandardizácia UI/UX, dokončenie prechodu na Material 3</td><td>Martin</td><td>Spravené</td></tr>
+      <tr><td>Opravy chýb v logike automatov</td><td>Martin</td><td>V procese</td></tr>
+      <tr><td>Upozornenie na uloženie rozpracovaného automatu</td><td>Jakub</td><td>V procese</td></tr>
+      <tr><td>Analýza používateľského rozhrania a vypracovanie usability reportu</td><td>Slavo</td><td>Spravené</td></tr>
+      <tr><td>Testovanie fungovania aplikácie (zásobníkové automaty) z hľadiska užívateľskej prívetivosti</td><td>Slavo</td><td>Nespravené</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Na stretnutí sa preberali prevažne chyby a bug fixy. Zhodnotil sa aktuálny stav aplikácie, pričom
+    sme sa zamerali na najnovšiu verziu označenú tagom v2.2 (prehľad implementovaných zmien od
+    v2.1 je dostupný tu). Vizuálna stránka aplikácie bola skontrolovaná a zhodnotená ako v poriadku.
+    Následne sme si zadefinovali plány a rozdelili úlohy na ďalší týždeň. Zároveň evidujeme nepriradenú
+    úlohu skontrolovať klasifikáciu gramatík, keďže regulárna gramatika a<sup>n</sup> sa momentálne nesprávne
+    zobrazuje ako Context-free.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 4 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Vytvoriť lepšiu štruktúru pre text v AboutScreen</td><td>Jakub</td></tr>
+      <tr><td>Pridať preklady do slovenčiny v aplikácii</td><td>Juraj</td></tr>
+      <tr><td>Opraviť hitboxy pre select/delete v automatoch</td><td>Martin</td></tr>
+      <tr><td>Naďalej testovať aplikáciu</td><td>Slavo</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 5 – letný semester -->
+<details>
+  <summary>Týždeň 5 — 2026-03-19</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Juraj, Samo</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 5 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Vytvoriť lepšiu štruktúru pre text v AboutScreen</td><td>Jakub</td><td>Spravené</td></tr>
+      <tr><td>Opravy chýb v logike automatov</td><td>Martin</td><td>V procese</td></tr>
+      <tr><td>Upozornenie na uloženie rozpracovaného automatu</td><td>Jakub</td><td>Spravené</td></tr>
+      <tr><td>Pridať preklady do slovenčiny v aplikácii</td><td>Juraj</td><td>Spravené</td></tr>
+      <tr><td>Opraviť hitboxy pre select/delete v automatoch</td><td>Martin</td><td>Spravené</td></tr>
+      <tr><td>Naďalej testovať aplikáciu</td><td>Slavo</td><td>V procese</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Na stretnutí pani vedúca oznámila tímu pripomienky voči logike zásobníkových automatov.
+    Niektoré veci totiž nefungujú korektne. Je potreba nahodiť naprogramovanú logiku Turingovho
+    stroja do user interface-u. Ideálne rozdeliť úlohy medzi členov tímu, kto ako pomôže. Vzhľadom k
+    chýbaniu Sama na prvých štyroch stretnutiach tohto semestra neboli spísané tímové zápisnice z
+    jednotlivých týždňov. Je treba ich spätne dovypracovať. Samo sa má spýtať Martina a Slava, čo
+    sa na stretnutiach prebralo. V dokumentácii projektu je treba previesť viacero zmien:
+  </p>
+  <ul class="muted">
+    <li>Upraviť správnosť použitých výrazov v časti o teórii</li>
+    <li>Logicky preusporiadať kapitoly dokumentácie: Teória → Komparatívna analýza → Vývoj aplikácie</li>
+    <li>V implementačnej časti pokryť použité technológie, knižnice, algoritmy a spôsoby programovania</li>
+    <li>Popísať architektúru aplikácie, vytvoriť odpovedajúce UML diagramy</li>
+    <li>Analyzovať čo bolo a čo chceme, pridať vizuálny sprievod (screenshoty pred a po)</li>
+  </ul>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 5 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Opravy chýb v logike automatov</td><td>Martin</td></tr>
+      <tr><td>Naďalej testovať aplikáciu</td><td>Slavo</td></tr>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td></tr>
+      <tr><td>Dopracovať vynechané zápisnice z prvých týždňov</td><td>Martin, Samo</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 6 – letný semester -->
+<details>
+  <summary>Týždeň 6 — 2026-03-26</summary>
+  <p class="muted">Zápisnica sa dopracúva.</p>
 </details>
 
 
