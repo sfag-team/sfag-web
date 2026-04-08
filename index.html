@@ -701,25 +701,31 @@
       byId('timeOut').textContent = 'Aktuálny čas: ' + new Date().toLocaleString('sk-SK');
     });
 
-    // Pridať riadok do zápisnice
-    byId('btnAddRow').addEventListener('click', () => {
-      const tbody = byId('minutesTable').querySelector('tbody');
-      const rowCount = tbody.rows.length + 1;
+    // Pridať riadok do zápisnice (only when the section is present)
+    const btnAddRow = byId('btnAddRow');
+    if (btnAddRow) {
+      btnAddRow.addEventListener('click', () => {
+        const tbody = byId('minutesTable').querySelector('tbody');
+        const rowCount = tbody.rows.length + 1;
 
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="mono" data-idx="${rowCount}">${rowCount}</td>
-        <td><input placeholder="Napr. Nový bod" /></td>
-        <td><textarea rows="2" placeholder="Poznámky..."></textarea></td>
-        <td><input placeholder="Zodpovedný" /></td>
-        <td><input type="date" /></td>
-        <td style="text-align:center"><input type="checkbox" /></td>
-      `;
-      tbody.appendChild(tr);
-    });
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="mono" data-idx="${rowCount}">${rowCount}</td>
+          <td><input placeholder="Napr. Nový bod" /></td>
+          <td><textarea rows="2" placeholder="Poznámky..."></textarea></td>
+          <td><input placeholder="Zodpovedný" /></td>
+          <td><input type="date" /></td>
+          <td style="text-align:center"><input type="checkbox" /></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
 
     // Tlač
-    byId('btnPrint').addEventListener('click', () => window.print());
+    const btnPrint = byId('btnPrint');
+    if (btnPrint) {
+      btnPrint.addEventListener('click', () => window.print());
+    }
   </script>
 </body>
 </html>
