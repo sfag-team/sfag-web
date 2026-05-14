@@ -674,7 +674,128 @@
 <!-- Týždeň 6 – letný semester -->
 <details>
   <summary>Týždeň 6 — 2026-03-26</summary>
-  <p class="muted">Zápisnica sa dopracúva.</p>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Martin Lukačka, Jakub Taňkoš, Juraj Lopušek, Slavomír Tung Le Minh, Samuel Strečko</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 6 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Dopracovať vynechané zápisnice z prvých týždňov</td><td>Martin, Samo</td><td>Spravené</td></tr>
+      <tr><td>Testovací report</td><td>Slavo</td><td>Spravené</td></tr>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td><td>Nespravené</td></tr>
+      <tr><td>Opravy chýb v logike automatov</td><td>Martin</td><td>V procese</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td><td>Nespravené</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Na stretnutí sa v krátkosti prebrala práca na odstraňovaní algoritmických chýb. Dohodlo sa na
+    presune voľby jazyka z about sekcie do hlavného menu. Na ďalší týždeň sa dohodlo prvé osobné
+    stretko tento semester.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 6 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Pokračovať v oprave chýb v logike automatov</td><td>Martin</td></tr>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td></tr>
+      <tr><td>Otestovať logiku automatov – nájsť a spracovať chyby</td><td>Samo</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 7 – letný semester -->
+<details>
+  <summary>Týždeň 7 — 2026-03-31</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Martin Lukačka, Jakub Taňkoš, Samuel Strečko</div>
+  </div>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Na stretnutí pani vedúca odprezentovala nájdené algoritmické chyby.
+  </p>
+  <p class="muted">
+    Prvý problém bol pri DPDA (deterministic pushdown automaton), keď pri simulácii pri úspešnom
+    dokončení výpočtu ostal koncový stav ofarbený na zeleno a predposledný na červeno. To, že ostal
+    koncový stav zelený je správne – automat akceptoval – to, že predposledný stav sa stal červený,
+    správne nie je. Chyba je pravdepodobne spôsobená prechodom pod epsilonom.
+  </p>
+  <p class="muted">
+    Druhý problém je nesprávne určenie typu gramatiky. Pre gramatiku G&nbsp;=&nbsp;({S},&nbsp;{a},&nbsp;P,&nbsp;S),
+    kde P&nbsp;=&nbsp;{S&nbsp;→&nbsp;ε;&nbsp;S&nbsp;→&nbsp;aS} algoritmus na určenie typu gramatiky označí gramatiku G
+    ako bezkontextovú, aj keď v skutočnosti ju mal označiť ako regulárnu.
+  </p>
+  <p class="muted">
+    Tretí problém je nekonzistencia pri použití symbolu Z, ktorý označuje dno zásobníku. Pri
+    predpripravených príkladoch (napr. wcw<sup>R</sup>) je pri prechode použitý tento symbol (napr. pop Z alebo
+    push Z). Pri manuálnom vytváraní automatu – konkrétne prechodu – už ale symbol Z nie je možné
+    zadať; naopak, očakáva sa, že používateľ nezadá nič (ε), čím získa správanie automatu ekvivalentné
+    tomu, ako keby zadal Z.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 7 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Pokračovať v oprave chýb v logike automatov</td><td>Martin</td></tr>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td></tr>
+      <tr><td>Presunúť voľbu jazyka do hlavného menu</td><td>Juraj</td></tr>
+      <tr><td>Opraviť algoritmus určenia typu gramatiky</td><td>Jakub</td></tr>
+      <tr><td>Otestovať algoritmicky aplikáciu</td><td>Samo</td></tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Týždeň 8 – letný semester -->
+<details>
+  <summary>Týždeň 8 — 2026-04-09</summary>
+
+  <div class="meta">
+    <div class="full"><strong>Účastníci:</strong> Martin Lukačka, Slavomír Tung Le Minh, Juraj Lopušek, Jakub Taňkoš, Samuel Strečko</div>
+  </div>
+
+  <h4>Úlohy z minulého týždňa</h4>
+  <table class="tasks" aria-label="Úlohy – týždeň 8 letný (stav)">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th><th>Stav</th></tr></thead>
+    <tbody>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td><td>Nespravené</td></tr>
+      <tr><td>Opravy chýb v logike automatov</td><td>Martin</td><td>V procese</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td><td>Nespravené</td></tr>
+      <tr><td>Presunúť voľbu jazyka do hlavného menu</td><td>Juraj</td><td>Nespravené</td></tr>
+      <tr><td>Opraviť algoritmus určenia typu gramatiky</td><td>Jakub</td><td>Nespravené</td></tr>
+      <tr><td>Otestovať algoritmicky aplikáciu</td><td>Samo</td><td>Spravené</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Popis priebehu stretnutia</h4>
+  <p class="muted">
+    Tento týždeň Martin pracoval na opravách algoritmických chýb. Samo spravil krátky nález chýb
+    spojený s návrhami na zlepšenie používateľského rozhrania. Vo vzduchu ostalo nahodenie Turingových
+    strojov do používateľského rozhrania, presun výberu jazyka do hlavného menu a nejaké ešte
+    nepreložené časti aplikácie, ktoré boli spísané v Slavovom reporte. Takisto dokumentácia a oprava
+    gramatík stagnuje. Do ďalšieho týždňa je treba zamakať.
+  </p>
+
+  <h4>Ciele na budúci týždeň</h4>
+  <table class="tasks" aria-label="Ciele – týždeň 8 letný">
+    <thead><tr><th>Úloha</th><th>Zodpovedný</th></tr></thead>
+    <tbody>
+      <tr><td>Pokračovať v oprave chýb v logike automatov</td><td>Martin</td></tr>
+      <tr><td>Nahodiť Turingove stroje do UI</td><td>Tím</td></tr>
+      <tr><td>Pracovať na dokumentácii projektu</td><td>Samo</td></tr>
+      <tr><td>Presunúť voľbu jazyka do hlavného menu, doprekladať nepreložené časti podľa Slavovho reportu</td><td>Juraj</td></tr>
+      <tr><td>Opraviť algoritmy v gramatikách, ozvať sa vedúcej či sa podarilo</td><td>Jakub, Juraj</td></tr>
+    </tbody>
+  </table>
 </details>
 
 
