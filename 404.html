@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 – Stránka nenájdená | Simulátor formálnych automatov a gramatík</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#60a5fa;
+      --ring:#1f2937;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+      color:var(--text);
+      background:var(--bg);
+      display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;
+    }
+    h1{font-size:clamp(48px,10vw,96px);margin:0;line-height:1;letter-spacing:-.04em;color:var(--accent)}
+    h2{font-size:clamp(18px,3vw,24px);margin:12px 0 8px;font-weight:600}
+    p{color:var(--muted);margin:0 0 24px;max-width:480px}
+    a{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid var(--ring);background:rgba(255,255,255,.04);
+      color:var(--text);text-decoration:none;
+      padding:10px 20px;border-radius:12px;
+      transition:border-color .2s ease, background .2s ease;
+    }
+    a:hover{border-color:rgba(96,165,250,.5);background:rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <div>
+    <h1>404</h1>
+    <h2>Stránka nenájdená</h2>
+    <p>Požadovaná stránka neexistuje. Vráťte sa na hlavnú stránku projektu.</p>
+    <a href="/sfag-web/">← Späť na hlavnú stránku</a>
+  </div>
+</body>
+</html>
